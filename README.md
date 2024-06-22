@@ -86,21 +86,16 @@ También, como prueba, se ha creado una función y se ha configurado una URL a t
    def helloworld(request):
        return HttpResponse("Hola, esto es una prueba")
    ```
-2. **Añade la aplicación `todos` al archivo `conquermanager/settings.py`:**
+2. **Añade la aplicación `todos` al archivo `settings.py`:**
 
-   Abre el archivo `conquermanager/settings.py` y agregalo al array  `INSTALLED_APPS`:
+    Abre `conquermanager/settings.py` y añade `'todos'` a la lista `INSTALLED_APPS`:
 
-   ```python
-   INSTALLED_APPS = [
-       'django.contrib.admin',
-       'django.contrib.auth',
-       'django.contrib.contenttypes',
-       'django.contrib.sessions',
-       'django.contrib.messages',
-       'django.contrib.staticfiles',
-       'todos',
-   ]
-   ```
+    ```python
+    INSTALLED_APPS = [
+        # Otras aplicaciones
+        'todos',
+    ]
+    ```
 
 3. **Configura la URL para la vista de prueba:**
 
